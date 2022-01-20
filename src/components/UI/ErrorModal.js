@@ -5,10 +5,12 @@ import Card from './Card';
 import Button from './Button';
 import classes from './ErrorModal.module.css';
 
+////Creating a portal for the backdrop
 const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onConfirm} />;
 };
 
+///Creating a portal for the modal overlay
 const ModalOverlay = (props) => {
   return (
     <Card className={classes.modal}>
@@ -25,6 +27,10 @@ const ModalOverlay = (props) => {
   );
 };
 
+/*
+Using the React DOM to push the two functions into the "root" files 
+in the HTML file in the public folder. This allows use to render these functions above the SRC files 
+*/
 const ErrorModal = (props) => {
   return (
     <>
